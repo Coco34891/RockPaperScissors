@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <Title>Rock Paper Scissors Trial</Title>
+ <script>
+let computerscore = 0;
+let playerscore = 0;
+
+ function computerPlay(){
+
+let play = Math.round(Math.random() * 2);
+switch (play) {
+    case 0:
+        return "rock";
+    case 1:
+        return "paper";
+    case 2:
+        return "scissors";
+    default:
+        console.log("Error in computerPlay()");
+        break;
+        } }
+let choice = prompt("What is your choice?");
+function playerPlay(){
+if (choice === "rock" && computerPlay() === "scissors"
+|| choice === "paper" && computerPlay() === "rock" 
+|| choice === "scissors" && computerPlay()=== "paper") {
+    playerscore++;
+return "Great job!"; 
+
+ } 
+else (choice === "scissors" && computerPlay() === "rock"
+|| choice === "rock" && computerPlay() === "paper" 
+|| choice === "paper" && computerPlay()=== "scissors"); {
+    computerscore++;
+return "You took an L!";
+;
+
+} }
+console.log(playerPlay())
+if (playerscore === 5) {
+    alert('Game Over, You won!')
+} else(computerscore === 5); {
+    alert("You are not having a good day are you")
+} 
+</script>
+
+
+
+
+
+
+
+
+</html>
